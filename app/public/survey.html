@@ -7,8 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="app/data/friend.js">
+
 
   <title>Document</title>
 </head>
@@ -176,9 +175,8 @@
             <h2 class="modal-title"><strong>Best Match</strong></h2>
           </div>
           <div class="modal-body">
-            <h2 id="match-name"></h2>
-            <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
-              alt="">
+            <h2 id="friendMatch"></h2>
+            <img id="imgMatch" src="" alt="">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -189,31 +187,60 @@
     </div>
 
     <script type="text/javascript">
-   
-      $("#viewfriendsButton").on("click", function () {
 
-        $.get("/api/friends", function (data) {
-          console.log(data);
-          if (data) {
-            //$("#stats").show();
-            $("#name").text(data.name);
-            $("#photo").text(data.photo);
-            $("#scores").text(data.scores);
-          } else {
-            console.log("Sorry no friends found");
-          }
-        });
-      });
 
-      $("#submit").on("click", function () {
+
+
+      $("#submit").on('click', function () {
+        // make variables object name the key : expected ? value
+        event.preventDefault();
         let newFriend = {
           name: $("#name").val().trim(),
           photo: $("#photo").val().trim(),
-          scores: [$("#scores").val().trim()],
+          scores: [
+            $("q1").val.trim(),
+            $("q2").val.trim(),
+            $("q3").val.trim(),
+            $("q4").val.trim(),
+            $("q5").val.trim(),
+            $("q6").val.trim(),
+            $("q7").val.trim(),
+            $("q8").val.trim(),
+            $("q9").val.trim(),
+            $("q10").val.trim()
+          ]
+        };
+        console.log(JSON.stringify(newFriend));
 
-        }
-        $.post("/api/friends", newFriend, function () { console.log("success") })
+
+        $.post("/api/friends", newFriend, function () {
+          console.log(data);
+
+          $('#friendMatch).html(data.matchName);
+		    	$("#imgMatch").attr("src", data.matchImage);
+          // Pop open the modal dialog
+          $('#modal1').modal('open');
+
+        });
+
+        console.log("success")
       });
+
+
+      // $("#viewfriendsButton").on("click", function () {
+
+      //   $.get("/api/friends", function (data) {
+      //     console.log(data);
+      //     if (data) {
+      //       //$("#stats").show();
+      //       $("#name").text(data.name);
+      //       //$("#photo").attr(("src", data.photo);
+      //       $("#scores").text(data.scores);
+      //     } else {
+      //       console.log("Sorry no friends found");
+      //     }
+      //   });
+      // });
 
 
     </script>
