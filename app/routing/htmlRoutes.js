@@ -1,28 +1,17 @@
+//Dependencies
+var path = require('path');
 
-// Your htmlRoutes.js file should include two routes:
-// A GET Route to /survey which should display the survey page.
-// A default, catch-all route that leads to home.html which displays the home page.
+//ROUTING
 
-// Basic route that sends the user first to the AJAX Page
-var path = require("path");
-const express = require('express'); // =========establish express==========
-const router = express.Router();  // ==========make a express router=========
+module.exports = function(app){
+  //default GET route that leads to home.html - displays home page
+  app.get('/survey', function (req, res) {
+    res.sendFile(path.join(__dirname + '/../public/survey.html'));
+  });
 
-
-
-/// export the  the api routes as a function
-
-router.get("/app/public/home", function (req, res) {
-    res.sendFile(path.join(__dirname, "/../public/survey.html"));
-});
-
-router.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "/../public/home.html"));
-});
-
-    // return router;
-    module.exports = router;
-
-
-
+  //a USE route to home page
+  app.use(function (req, res) {
+    res.sendFile(path.join(__dirname + '/../public/home.html'));
+  });
+};
 
