@@ -1,17 +1,19 @@
-//Dependencies
-var path = require('path');
 
-//ROUTING
+module.exports = (app) => {
 
-module.exports = function(app){
-  //default GET route that leads to home.html - displays home page
-  app.get('/survey', function (req, res) {
-    res.sendFile(path.join(__dirname + '/../public/survey.html'));
-  });
+	app.get('/', (req, res) => {
+		// res.sendFile(path.join(__dirname, 'home.html'));
+		res.sendFile('home.html', { root: './app/public' });
+	});
 
-  //a USE route to home page
-  app.use(function (req, res) {
-    res.sendFile(path.join(__dirname + '/../public/home.html'));
-  });
+	app.get('/survey', (req,res) => {
+		// res.sendFile(path.join(__dirname, 'survey.html'));
+		res.sendFile('survey.html', { root: './app/public' });
+	})
+
+	app.get('/logic.js', (req,res) => {
+		// res.sendFile(path.join(__dirname, 'survey.html'));
+		res.sendFile('logic.js', { root: './' });
+	})
 };
 

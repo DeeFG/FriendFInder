@@ -1,0 +1,72 @@
+let friends = [
+{
+  "name":"Idris",
+  "photo":"https://pixel.nymag.com/imgs/daily/vulture/2019/02/20/20-idris-elba.w330.h330.jpg",
+  "scores":[
+      5,
+      4,
+      1,
+      5,
+      1
+    ] 
+},
+{
+  "name":"Jennifer",
+  "photo":"https://imgs.smoothradio.com/images/38393?width=1908&crop=16_9&signature=31MBpp8reqkw-vH9PRpWY8uh5-g=",
+  "scores":[
+      1,
+      5,
+      5,
+      5,
+      3
+    ]
+},
+{
+  "name":"Marshawn",
+  "photo":"https://cdn.abcotvs.com/dip/images/4537492_102218-kgo-ap-marshawn-lynch-img.jpg?w=1280&r=16%3A9",
+  "scores":[
+      1,
+      3,
+      3,
+      1,
+      5
+    ]
+},
+{
+  "name":"Ali",
+  "photo":"https://pmcvariety.files.wordpress.com/2018/05/ali-wong.jpg?w=1000",
+  "scores":[
+      1,
+      4,
+      3,
+      1,
+      5
+    ]
+},
+{
+  "name":"Rozonda",
+  "photo":"http://www.gstatic.com/tv/thumb/persons/431429/431429_v9_bb.jpg",
+  "scores":[
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+},
+{
+  "name":"Quinn",
+  "photo":"https://ksassets.timeincuk.net/wp/uploads/sites/55/2018/09/margot-920x584.png",
+  "scores":[
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+}
+];
+
+module.exports = friends;
+
+
