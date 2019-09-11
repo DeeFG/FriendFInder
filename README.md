@@ -3,7 +3,7 @@
 
 ## a compatibility-based "FriendFinder" application -- basically a dating app. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. 
 
-## [ :arrow_forward: DEMO](https://github.com/DeeFG/FriendFinder)
+## [ :arrow_forward: DEMO](https://morning-springs-22094.herokuapp.com/survey)
 
 ## Problem :question:
 #### do you get FOMO (Fear Of Missing Out) when your friends hang with their "other friends" ???
