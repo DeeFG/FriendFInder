@@ -6,10 +6,10 @@
 ## [ :arrow_forward: DEMO](https://morning-springs-22094.herokuapp.com/survey)
 
 ## Problem :question:
-#### do you get FOMO (Fear Of Missing Out) when your friends hang with their "other friends" ???
+#### Do you get FOMO (Fear Of Missing Out) when your friends hang with their "other friends" ???
 
 ## Solution :hammer_and_wrench: 
-#### Based on you anwers to our short survey we will match you with the most compatible friend 
+#### Based on your answers to our short survey we will match you with the most compatible friend 
 
 
 ## Technology Used: :computer:
